@@ -17,7 +17,7 @@ git clone https://github.com/curbro/reddit-wallpaper-changer.git
 }
 ```
 
-4. Update subreddits.txt with a comma-delimited list of subreddits from which to pull images.
+4. Update [subreddits.txt](https://github.com/curbro/reddit-wallpaper-changer/blob/master/subreddits.txt) with a comma-delimited list of subreddits from which to pull images.
 
 5. Run the script.
 ```
