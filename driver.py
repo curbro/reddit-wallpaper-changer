@@ -13,13 +13,13 @@ api_url = "https://api.imgur.com/3"
 
 
 def delete_images():
-  image_path = os.getcwd() + '/wallpaper-changer/wallpapers'
+  image_path = work_directory + '/wallpapers'
   for root, dirs, files in os.walk(image_path):
     for file in files:
         os.remove(os.path.join(root, file))
 
 def save_image(image_url):
-  wallpaper_dir = os.getcwd() + '/wallpaper-changer/wallpapers'
+  wallpaper_dir = work_directory + '/wallpapers'
   r = requests.get(image_url, stream=True)
   if not os.path.exists(wallpaper_dir):
     os.makedirs(wallpaper_dir)
