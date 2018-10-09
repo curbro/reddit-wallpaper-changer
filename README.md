@@ -27,9 +27,25 @@ python3 ~/wallpaper-changer/driver.py
 6. Follow the instructions.
 
 ## How to run as a Launch Agent
-1. Copy [com.user.reddit-wallpaper-changer.plist](https://github.com/curbro/reddit-wallpaper-changer/blob/master/com.user.reddit-wallpaper-changer.plist) to ~/Library/LaunchAgent/.
+1. Modify [com.user.reddit-wallpaper-changer.plist](https://github.com/curbro/reddit-wallpaper-changer/blob/master/com.user.reddit-wallpaper-changer.plist) with the path to [driver.py](https://github.com/curbro/reddit-wallpaper-changer/blob/master/driver.py) on your system.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.reddit-wallpaper-changer</string>
+    <key>Program</key>
+    <string>/path/to/wallpaper-changer/driver.py</string>
+    <key>StartInterval</key>
+    <integer>60</integer>
+</dict>
+</plist>
+```
 
-2. Load the plist file in to launchd.
+2. Copy the plist file to ~/Library/LaunchAgent/.
+
+3. Load the plist file in to launchd.
 ```
 launchctl load ~/Library/LaunchAgent/com.user.reddit-wallpaper-changer.plist
 ```
