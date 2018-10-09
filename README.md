@@ -9,7 +9,7 @@ This is a simple script to pull a random image from imgur for a given list of su
 git clone https://github.com/curbro/reddit-wallpaper-changer.git
 ```
 
-3. Update config.json with the client api and client secret provided at imgur client registration.
+3. Update [config.json](https://github.com/curbro/reddit-wallpaper-changer/blob/master/config.json) with the client api and client secret provided at imgur client registration.
 ```
 {
   "client_id":"YOUR CLIENT ID",
